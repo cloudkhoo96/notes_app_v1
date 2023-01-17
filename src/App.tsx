@@ -5,11 +5,9 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { useLocalStorage } from "./component/useLocalStorage";
 import { NewNote } from "./pages/NewNote";
 import { v4 as uuidV4 } from "uuid";
-<<<<<<< HEAD
-=======
 import { NoteList } from "./pages/NoteList";
 import { NoteLayout } from "./component/NoteLayout";
->>>>>>> c851008 (first)
+
 
 export type Note = {
   id: string;
@@ -65,14 +63,12 @@ function App() {
   return (
     <Container className="my-4">
       <Routes>
-<<<<<<< HEAD
         <Route path="/" element={<h1>Hi</h1>}></Route>
-=======
+
         <Route
           path="/"
           element={<NoteList notes={notesWithTags} availableTags={tags} />}
         ></Route>
->>>>>>> c851008 (first)
         <Route
           path="/new"
           element={
@@ -83,11 +79,11 @@ function App() {
             />
           }
         ></Route>
-<<<<<<< HEAD
-        <Route path="/:id">
-=======
+
+        
+
         <Route path="/:id" element={<NoteLayout notes={notesWithTags} />}>
->>>>>>> c851008 (first)
+
           <Route index element={<h1>Show</h1>} />
           <Route path="edit" element={<h1>Edit</h1>} />
         </Route>
